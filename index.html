@@ -2,13 +2,72 @@
 <html lang="en">
 
 <head>
-    <meta name="google-site-verification" content="0J8UTrh84W4PW8LZe-xp6SKEgFSgskncAvPbdCZxIe4" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Page</title>
+    <meta name="description" content="FlyDI - A lightweight Java dependency injection framework offering constructor and setter injection with a flyweight-inspired design.">
+    <meta name="keywords" content="FlyDI, Dependency Injection, Java, Constructor Injection, Setter Injection, Lightweight Framework, Java DI, Flyweight Design, Memory Efficient Java, Java Frameworks">
+    <meta name="google-site-verification" content="0J8UTrh84W4PW8LZe-xp6SKEgFSgskncAvPbdCZxIe4" />
+    <title>FlyDI - Lightweight Dependency Injection for Java</title>
 </head>
+
 <body>
-<h1>Welcome to My GitHub Page!</h1>
-<p>This is a sample index.html file.</p>
+<header>
+    <h1>FlyDI</h1>
+    <p>A lightweight dependency injection framework for Java</p>
+</header>
+
+<section id="features">
+    <h2>Features</h2>
+    <ul>
+        <li><strong>Constructor Injection</strong>: Automatically inject dependencies via constructors.</li>
+        <li><strong>Setter Injection</strong>: Inject dependencies via setter methods.</li>
+        <li><strong>Lightweight</strong>: Minimal overhead, designed to keep things simple and efficient.</li>
+        <li><strong>Flyweight-Inspired Design</strong>: Encourages efficient use of memory and resources.</li>
+    </ul>
+</section>
+
+<section id="installation">
+    <h2>Installation</h2>
+    <p>To use FlyDI in your Java project, simply include the following dependency in your project (Maven/Gradle dependency instructions will go here if available).</p>
+</section>
+
+<section id="usage">
+    <h2>Usage</h2>
+    <p>FlyDI provides a simple way to manage dependencies in your Java application. Just follow these steps:</p>
+    <ol>
+        <li>Annotate your classes with <code>@ManagedBean</code>.</li>
+        <li>Use <code>@Inject</code> to mark constructors or setter methods for dependency injection.</li>
+    </ol>
+
+    <h3>Example:</h3>
+    <pre><code>
+@ManagedBean
+public class MyService {
+
+    private MyRepository repository;
+
+    @Inject
+    public MyService(MyRepository repository) {
+        this.repository = repository;
+    }
+
+    // or using setter injection
+    @Inject
+    public void setRepository(MyRepository repository) {
+        this.repository = repository;
+    }
+}
+        </code></pre>
+</section>
+
+<section id="links">
+    <h2>GitHub Repository</h2>
+    <p>Find the full project and documentation on GitHub: <a href="https://github.com/Chris-Whiteley/flydi" target="_blank">FlyDI GitHub Repository</a></p>
+</section>
+
+<footer>
+    <p>&copy; 2024 FlyDI. All rights reserved.</p>
+</footer>
 </body>
+
 </html>
